@@ -6,6 +6,8 @@
 
 ## EDR shell scripts
 
+Each script includes SIEM-ready logging (Journald, Unified Logging, EventLog)
+
 * [Linux EDR shell script](cheatsheet-linux)
 * [macOS EDR shell script](cheatsheet-macos)
 * [Windows EDR powershell script](cheatsheet-windows)
