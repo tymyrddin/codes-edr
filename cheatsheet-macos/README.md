@@ -1,6 +1,26 @@
 # macOS EDR Deployment
 
-## Overview
+What It Does
+
+* EndpointSecurity Framework (ESF) - Blocks unsigned code execution and monitors file modifications
+* SIP Enforcement - Ensures kernel/extensions can't be modified even by root
+* Unified Logging - Centralizes security events for SIEM integration
+
+Why It Matters
+
+* Apple’s built-in security only covers App Store apps
+* Stops macOS-specific threats like:
+   * Silver Sparrow (M1 malware)
+   * XCSSET (Xcode supply-chain attacks)
+* Complies with macOS security benchmarks (CIS Level 1)
+
+Key Protection Against:
+
+* Adware bundles (e.g., Pirrit, Shlayer)
+* Office macro-based attacks
+* Time Machine backup tampering
+
+## Overview code
 
 Production-ready script for deploying:
 - EndpointSecurity Framework (ESF) rules

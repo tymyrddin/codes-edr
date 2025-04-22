@@ -1,6 +1,26 @@
 # Windows EDR Deployment
 
-## Overview
+What It Does
+
+* Attack Surface Reduction (ASR) - Blocks Office macros, script-based attacks
+* Service ACL Auditing - Flags vulnerable service permissions (e.g., unquoted paths)
+* WMI Process Monitoring - Detects suspicious parent-child process chains
+
+Why It Matters
+
+* Microsoft Defender alone misses fileless/LOLBins attacks
+* Critical for stopping:
+  * Ransomware (Conti, REvil)
+  * LSASS credential dumping
+  * Living-off-the-land (PsExec, WMI abuse)
+
+Key Protection Against:
+
+* CVE-2023-23397 (Outlook NTLM theft)
+* PrintNightmare exploits
+* Mimikatz-style credential attacks
+
+## Overview code
 
 Production-grade PowerShell script that deploys:
 - Real-time process monitoring via WMI
