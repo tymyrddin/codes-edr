@@ -4,6 +4,12 @@
 
 ----
 
+## EDR scripts
+
+* [Linux EDR](cheatsheet-linux)
+* [macOS EDR](cheatsheet-macos)
+* [Windows EDR](cheatsheet-windows)
+
 ## Vulnerability discovery
 
 These focus on the most common attack vectors hackers exploit on each platform.
