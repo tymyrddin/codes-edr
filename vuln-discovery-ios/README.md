@@ -17,6 +17,14 @@
 
 ### Basic usage
 
+Special notes:
+
+* Some checks may trigger App Store review warnings
+* Jailbreak detection methods may require justification
+* SSL pinning checks need proper entitlements
+
+Integration:
+
 ```
 let scanner = iOSVulnerabilityScanner()
 scanner.run_scan()
@@ -98,7 +106,26 @@ Privacy Manifest (iOS 17+), create PrivacyInfo.xcprivacy with:
 </dict>
 ```
 
-### Extending functionality
+App Store considerations:
+
+* Justify jailbreak detection in App Review notes
+* Use #if DEBUG for aggressive checks:
+    swift
+
+```
+#if DEBUG
+checks.append(check_debugger_attach)
+#endif
+```
+Performance optimization:
+
+```
+DispatchQueue.concurrentPerform(iterations: checks.count) { i in
+    checks[i]() // Parallel execution
+}
+```
+
+Extending functionality:
 
 ```
 // To add a new check:
@@ -116,8 +143,3 @@ checks.append {
 [+] indicates scan completion
 ```
 
-## Special Notes
-
-* Some checks may trigger App Store review warnings
-* Jailbreak detection methods may require justification
-* SSL pinning checks need proper entitlements

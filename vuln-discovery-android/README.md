@@ -80,22 +80,22 @@ Required permissions (add to AndroidManifest.xml):
 <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
 ```
 
-Runtime Permissions (Android 11+)
+For production, obfuscate scanner code with ProGuard:
 
 ```
-// In Activity:
-if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-    requestPermissions(arrayOf(Manifest.permission.QUERY_ALL_PACKAGES), 0)
-}
+-keep class com.example.vulnscanner.AndroidVulnerabilityScanner { *; }
 ```
 
-### Extending functionality
+Use runtime permission checks for Android 13+
+
+Advanced features:
 
 ```
-// To add a new check:
-checks.add(() -> {
-    System.out.println("\n[*] Running custom check...");
-    // Implementation here
+// Add custom checks
+scanner.addCheck(() -> {
+    if (Build.FINGERPRINT.contains("test-keys")) {
+        System.out.println("[!] Test keys detected - custom ROM");
+    }
 });
 ```
 
