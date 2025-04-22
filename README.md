@@ -6,9 +6,9 @@
 
 ## EDR shell scripts
 
-* [Linux EDR](cheatsheet-linux)
-* [macOS EDR](cheatsheet-macos)
-* [Windows EDR](cheatsheet-windows)
+* [Linux EDR shell script](cheatsheet-linux)
+* [macOS EDR shell script](cheatsheet-macos)
+* [Windows EDR powershell script](cheatsheet-windows)
 
 ----
 
