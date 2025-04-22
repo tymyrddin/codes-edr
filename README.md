@@ -4,11 +4,13 @@
 
 ----
 
-## EDR scripts
+## EDR shell scripts
 
 * [Linux EDR](cheatsheet-linux)
 * [macOS EDR](cheatsheet-macos)
 * [Windows EDR](cheatsheet-windows)
+
+----
 
 ## Vulnerability discovery
 
