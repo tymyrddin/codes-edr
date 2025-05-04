@@ -23,13 +23,13 @@ windows_scanner.exe
 
 ## Adding new checks:
 
-To add a new check to any `.cpp` scanner (Windows, MacOS, Linux):
+To add a new check to any `.cpp` scanner:
 
 * Create a new function in the appropriate namespace
 * Implement the check logic
 * Add the function pointer to the checks vector in run_*_checks()
 
-Example for Windows:
+Example:
 
 ```commandline
 namespace win_checks {
